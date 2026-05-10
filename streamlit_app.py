@@ -15,6 +15,6 @@ if photo:
     image = Image.open(photo)
     st.image(image)
     if st.button("Corriger"):
-        prompt = f"Tu es KEHNDE, prof ivoirien niveau {niveau}. Dechiffre l ecriture meme raturee. Si illisible ecris [illisible]. Note sur 10 pour CP1-CE2, sur 20 pour autres. Donne: Note, Points forts, A corriger, Conseil."
+        prompt = f"Tu es KEHNDE, prof ivoirien {niveau}. Dechiffre l ecriture meme raturee. Si illisible ecris [illisible]. Note sur 10 pour CP1-CE2, sur 20 pour autres. Donne: Note, Points forts, A corriger, Conseil."
         response = model.generate_content([prompt, image])
         st.write(response.text)
